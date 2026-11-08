@@ -1,0 +1,44 @@
+name: Update README cards
+
+on:
+  schedule:
+    - cron: '17 */2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: readme-cards
+  cancel-in-progress: false
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: pedrocatalao/github-cool-readme@4b5612f2aa2da65cc4012b3fb006b646abb33cf0
+        with:
+          token: ${{ github.token }}
+          output: ${{ runner.temp }}/cards
+      - name: Publish cards
+        shell: bash
+        run: |
+          if ! ls "$RUNNER_TEMP"/cards/*.svg >/dev/null 2>&1; then
+            echo "No cards enabled"
+            exit 0
+          fi
+          git fetch --quiet --depth 1 origin cards:refs/remotes/origin/cards 2>/dev/null || true
+          previous_head=$(git rev-parse --quiet --verify refs/remotes/origin/cards || true)
+          git switch --quiet --orphan cards
+          cp "$RUNNER_TEMP"/cards/*.svg .
+          git add -- *.svg
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit --quiet -m 'Update README cards'
+          if [ -n "$previous_head" ] && git diff --quiet "$previous_head" HEAD; then
+            echo "No changes"
+            exit 0
+          fi
+          git push --force-with-lease="refs/heads/cards:$previous_head" origin HEAD:refs/heads/cards

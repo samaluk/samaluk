@@ -1,0 +1,23 @@
+user: samaluk
+
+show: [summary, languages, contributions, weekly]
+
+count:
+  private: false
+  orgs: true
+
+look:
+  style: classic
+  color: github
+  animations: true
+  background: none
+  border: false
+
+cards:
+  summary:
+    title: Public GitHub activity
+  languages:
+    count: 6
+  contributions:
+    count: 6
+    open: true
