@@ -21,7 +21,13 @@ needs constant attention, it has not solved the problem yet.
 
 ## GitHub activity
 
-Public activity, refreshed automatically every two hours.
+Refreshed automatically every two hours.
+
+> [!NOTE]
+> Commit, pull request, review, and language statistics below use public repositories only.
+> My GitHub contribution graph also includes anonymized private activity, without repository names or details.
+> Activity-day and weekly-rhythm figures may include those anonymous counts.
+> The card workflow has no access to private workplace repositories and uses no personal access token.
 
 <!-- cool-readme:start -->
 <p align="center">
