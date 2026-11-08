@@ -19,3 +19,30 @@ needs constant attention, it has not solved the problem yet.
 - [homelab](https://github.com/samaluk/homelab): Docker Compose stacks for a
   self-hosted Synology setup.
 
+## GitHub activity
+
+Public activity, refreshed automatically every two hours.
+
+<!-- cool-readme:start -->
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/samaluk/samaluk/cards/summary-dark.svg">
+    <img src="https://raw.githubusercontent.com/samaluk/samaluk/cards/summary-light.svg" width="400" alt="Public GitHub activity">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/samaluk/samaluk/cards/languages-dark.svg">
+    <img src="https://raw.githubusercontent.com/samaluk/samaluk/cards/languages-light.svg" width="400" alt="Most used languages, weighted by commits">
+  </picture>
+</p>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/samaluk/samaluk/cards/contributions-dark.svg">
+    <img src="https://raw.githubusercontent.com/samaluk/samaluk/cards/contributions-light.svg" width="400" alt="Notable open-source contributions">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/samaluk/samaluk/cards/weekly-dark.svg">
+    <img src="https://raw.githubusercontent.com/samaluk/samaluk/cards/weekly-light.svg" width="400" alt="Weekly contribution rhythm">
+  </picture>
+</p>
+<!-- cool-readme:end -->
+
